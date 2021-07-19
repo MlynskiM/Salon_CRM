@@ -1,0 +1,186 @@
+:root{
+    --primary-color:#2F4858;
+    --secondary-color:#33658A;
+    --tertiary-color:#86BBD8;
+
+    --filter-icon:invert(85%);
+    --filter-icon-active:invert(15%);
+
+    --icon-margin-top:20px;
+    
+}
+
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background: url('../img/AdobeStock_309612306.jpeg') center center no-repeat;
+    background-size: cover;
+}
+
+
+.option-box{
+    width:620px;
+    height:690px;
+    padding:10px;
+    margin:auto;
+    margin-top: 100px;
+    background:#ddd;
+    border-radius:4%;
+}
+.btn-spec{
+    background-color: var(--primary-color);
+    margin:auto;
+    margin-top:15px;
+    width: 80%;
+    color:#ddd;
+    font-size: 1.4em;
+}
+
+.active{
+    background-color: var(--secondary-color) !important;
+    
+}
+.active .icon-box{
+    -webkit-filter: var(--filter-icon-active)  !important; /* Safari/Chrome */ 
+    filter: var(--filter-icon-active)  !important;
+}
+.active h2{
+    -webkit-filter: var(--filter-icon-active)!important; /* Safari/Chrome */ 
+    filter: var(--filter-icon-active) !important;
+}
+#lashes, #nails, #eyebrew, #wax{
+    border-radius:4%;
+    box-shadow: 0 0 0.5em #888888;
+    width:270px;
+    height:270px;
+    padding:70px 70px 70px 70px;
+    background-color:var(--primary-color);
+    margin:20px 0 10px 30px;
+}
+.text-poz{
+    position:relative;
+}
+.text-poz h2{
+    color:#000;
+    -webkit-filter: var(--filter-icon) ; /* Safari/Chrome */ 
+    filter: var(--filter-icon) ;
+    position:absolute;
+    top:3%;
+}
+#lashes h2{
+    left:35%;
+}
+#nails h2{
+    left:25%;
+}
+#eyebrew h2{
+    left:38%;
+}
+#wax h2{
+    left:25%;
+}
+
+
+#lashes .icon-box{
+    margin-top: var(--icon-margin-top);
+    width: 100%;
+    height:100%;
+    background: url('../img/eye-outline-variant-with-lashes-and-enlarged-pupil.png') center center no-repeat;
+    -webkit-filter: var(--filter-icon); /* Safari/Chrome */
+    filter: var(--filter-icon);
+    background-size: cover;
+}
+
+#nails .icon-box{
+    margin-top: var(--icon-margin-top);;
+    width: 100%;
+    height:100%;
+    background: url('../img/nail-polish.png') center center no-repeat;
+    -webkit-filter: var(--filter-icon); /* Safari/Chrome */
+    filter: var(--filter-icon);
+    background-size: cover;
+}
+
+#eyebrew .icon-box{
+    margin-top: var(--icon-margin-top);;
+    width: 100%;
+    height:100%;
+    background: url('../img/closed-eyes-with-lashes-and-brows.png') center center no-repeat;
+    -webkit-filter: var(--filter-icon); /* Safari/Chrome */
+    filter: var(--filter-icon);
+    background-size: cover;
+}
+
+#wax .icon-box{
+    margin-top: var(--icon-margin-top);;
+    width: 100%;
+    height:100%;
+    background: url('../img/depilation.png') center center no-repeat;
+    -webkit-filter: var(--filter-icon); /* Safari/Chrome */
+    filter: var(--filter-icon);
+    background-size: cover;
+}
+
+
+
+#Custom_services{
+    margin-top:50px;
+    background-color: #eee;
+    padding: 80px 150px;
+}
+
+.title{
+    margin: 0 0 70px 0;
+}
+.section{
+    border-top: 1px solid var(--primary-color);
+    margin: 70px 0 0 0;
+}
+.section button{
+    margin-top:50px;
+}
+#info_col{
+    border-left: 1px solid var(--primary-color);
+}
+
+label{
+    margin: 20px 0 10px 0;
+}
+
+.form-check-label{
+    text-align:left !important;
+}
+
+.nopadding{
+    text-align:left !important;
+    margin: 2px 0 !important;
+    padding: 0 !important;
+}
+
+.separator{
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+    height: 0;
+    margin: 10px 0;
+}
+
+h4{
+    margin-top: 10px;
+}
+
+.border-title{
+    border-left: 1px solid var(--primary-color);
+    padding:10px;
+}
+.border-title-right{
+    border-right: 1px solid var(--primary-color);
+    
+}
+
+.day_date{
+    padding:40px 0 !important;
+    justify-content:center;
+}

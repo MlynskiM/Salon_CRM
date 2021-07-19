@@ -1,0 +1,64 @@
+:root{
+    --primary-color:#2F4858;
+    --secondary-color:#33658A;
+    --tertiary-color:#86BBD8;
+
+    --filter-icon:invert(85%);
+    --filter-icon-active:invert(15%);
+
+    --icon-margin-top:20px;
+    
+}
+
+
+#calendar, h4{
+    margin: 30px;
+}
+
+.dayNow{
+    background-color: var(--primary-color) !important;
+    color: #eee;
+    cursor: pointer;
+}
+.dayNotNow{
+    background-color: var(--teritary-color) !important;
+    cursor: pointer;
+    z-index: 999;
+}
+.dayHover:hover{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    color:#eee;
+
+}
+
+
+
+
+.availableHour{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+}
+
+.availableHour:hover{
+    cursor: pointer;
+    text-decoration: none ;
+    color:var(--primary-color);
+}
+
+.ArrowLeft{
+    margin-right: 20px;
+    text-decoration: none ;
+    color: var(--primary-color);
+}
+.ArrowRight{
+    margin-left: 20px;
+    text-decoration: none ;
+    color: var(--primary-color);
+}
+
+.ArrowRight:hover, .ArrowLeft:hover{
+    cursor: pointer;
+    color: var(--secondary-color);
+}
