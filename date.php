@@ -74,17 +74,13 @@ $conn->close();
 <div class="container" id="Custom_services">
     <div class="container-fluid col text-center align" >
        <h1>Wybierz dogodny termin zabiegu</h1>
+       <form action="test.php" method="post">
+         
         <div class="row">
-
 
           <div class="col-lg-6">
             <div id="calendar"></div>
           </div>
-
-
-
-
-
 
           <div class="col-lg-6" id="HoursToPick">
             <h4 id='showDate'>Dostępne godziny:</h4>
@@ -147,6 +143,8 @@ $conn->close();
             ?>
           <div class="separator"></div>
               <div>
+              <input type="hidden" name="day" value="0" id="day_input">
+              <input type="hidden" name="hour" value="0" id="hour_input">
                 <h4>
                   Wizyta: 
                 </h4>
@@ -154,9 +152,11 @@ $conn->close();
           </div>
           
         </div>
-        <div class="separator"></div>
-       
         
+        <div class="row section">
+                    <button class="btn btn-spec" type="submit">Zarezerwuj zabieg!</button>
+        </div>
+        </form>
     </div>
 </div>
 </main>

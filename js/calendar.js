@@ -41,7 +41,6 @@ function displayCalendar(DateVariable){
     var weekdays2 = weekdays;
     var numOfDays = dayPerMonth[month];
 
-    console.log(nextMonth);
 
 
     // this leave a white space for days of pervious month.
@@ -80,9 +79,9 @@ function displayCalendar(DateVariable){
 
     // building the calendar html body.
     var calendarBody = "<table class='calendar table' id='myTable'> <tr class='monthNow'><th colspan='7'>"
-    +`<a class='ArrowLeft' onclick='CalendarSlider(1,${month},${year})'> <i class='fas fa-angle-double-left'></i> </a>`
+    +`<a class='ArrowLeft' onclick='CalendarSlider(1)'> <i class='fas fa-angle-double-left'></i> </a>`
     +monthNames[month]+" "+ year 
-    +`<a class='ArrowRight' onclick='CalendarSlider(2,${month},${year})'><i class='fas fa-angle-double-right'></i></a>`
+    +`<a class='ArrowRight' onclick='CalendarSlider(2)'><i class='fas fa-angle-double-right'></i></a>`
     +"</th></tr>";
     calendarBody +="<tr class='dayNames'>  <td>Pon</td>  <td>Wt</td> <td>Śr</td>"+
         "<td>Czw</td> <td>Pt</td> <td>Sob</td> <td>Niedz</td> </tr>";
@@ -92,35 +91,36 @@ function displayCalendar(DateVariable){
     // set the content of div .
     document.getElementById("calendar").innerHTML=calendarBody;
    
+    var day_input = document.getElementById("day_input");
+    var hour_input = document.getElementById("hour_input");
     
+
     document.querySelectorAll('#myTable td')
     .forEach(e => e.addEventListener("click", ()=> {
         Picked_date_surr = e.getAttribute('value');
-        console.log(Picked_date_surr);
+        day_input.setAttribute('value',Picked_date_surr);
     }));
 
 
     document.querySelectorAll('#HoursToPick a')
     .forEach(e => e.addEventListener("click", ()=> {
         Picked_date_surr = e.getAttribute('value');
-        console.log(Picked_date_surr);
+        hour_input.setAttribute('value',Picked_date_surr);
     }));
     
 
 }
 
+// Var defined globaly cause if i define it into a function there is an err => every time function is called
+// Variables are defined again and their started value is always the same. 
 
-var dateNow2 = new Date();
-var CalendarYear = dateNow2.getFullYear();
-var CalendarMonth = dateNow2.getMonth();
+    var dateNow2 = new Date();
+    var CalendarYear = dateNow2.getFullYear();
+    var CalendarMonth = dateNow2.getMonth();
 
-function CalendarSlider(side, year, month){
+function CalendarSlider(side){
 
     
-    
-    let CurrentYear = year;
-    let CurrentMonth = month;
-
     if(side == 1){
         if(CalendarMonth != 0){
             CalendarMonth--;
