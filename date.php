@@ -45,49 +45,37 @@ $conn->close();
 <body onload="displayCalendar(new Date())">
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-   <div class="container">
-  <a class="navbar-brand" href="../Brighten/index.php">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
+<?php include "../Brighten/nav.php"?>
+
 
 <main >
 <div class="container" id="Custom_services">
     <div class="container-fluid col text-center align" >
        <h1>Wybierz dogodny termin zabiegu</h1>
-       <form action="test.php" method="post">
+      
          
         <div class="row">
 
           <div class="col-lg-6">
-            <div id="calendar"></div>
+            <form  id="ChoosenDay">
+              <div id="calendar"></div>
+              <input type="hidden" name="day_choosen" value="0" id="day_choosen">
+            </form>
           </div>
 
           <div class="col-lg-6" id="HoursToPick">
+          <form action="test.php" method="post">
             <h4 id='showDate'>Dostępne godziny:</h4>
 
             <?php 
             
               include '../Brighten/database/db.php';
+
+              
+              // You can access the values posted by jQuery.ajax
+              // through the global variable $_POST, like this:
+              $DayChoosen = isset($_POST['Picked_date']) ? $_POST['Picked_date'] : null;
+              if($DayChoosen != null)echo"UDAŁO SIĘ KURWA".$DayChoosen;
               $sql = "SELECT id, data, hour FROM services_date";
               $result = $conn->query($sql);
 
