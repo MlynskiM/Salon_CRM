@@ -32,7 +32,10 @@
 
 }
 
-
+.date-block {
+    display:inline-block;
+    width:140px;
+}
 
 
 .availableHour{
